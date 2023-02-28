@@ -8,7 +8,7 @@ app.use(express.json());
 app.get('/',async (req,res)=>{
   let page=req.query.page;
   try {
-    let data = await olxModel.find().skip(page *1 -1).limit(2)
+    let data = await olxModel.find().skip(page *1 -1).limit(4)
     res.send(data)
   } catch (err) {
     res.send("Something went wrong");
